@@ -1,35 +1,36 @@
-<table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-        <th>Nom Chef</th>
-        <th>Date Menu</th>
-        <th>Entre</th>
-        <th>Plat</th>
-        <th>Dessert</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
+<section class="u-align-left u-clearfix u-image u-section-1" id="carousel_b562" data-image-width="150"
+         data-image-height="100">
     <?php
-    include 'database.php';
-    $pdo = Database::connect();
-    $sql = 'SELECT * FROM menu ORDER BY id DESC';
-    foreach ($pdo->query($sql) as $row) {
-        echo '<tr>';
-        echo '<td>' . $row['nameChief'] . '</td>';
-        echo '<td>' . $row['dateMenu'] . '</td>';
-        echo '<td>' . $row['nameEntre'] . '</td>';
-        echo '<td>' . $row['nameFlat'] . '</td>';
-        echo '<td>' . $row['nameDessert'] . '</td>';
-        echo '<td>';
-        echo '<a href="menu.php?id=' . $row['id'] . '" class="mr-3" title="Voir Utilisateur" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-        echo '<a href="editMenu.php?id=' . $row['id'] . '" class="mr-3" title="Modifier utilisateur" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-        echo '<a href="deleteMenu.php?id=' . $row['id'] . '" title="Supprimer utilisateur" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-        echo '</td>';
-        echo '</tr>';
-    }
-    Database::disconnect();
+    $sql = 'SELECT  nameEntre, nameFlat, nameDessert FROM menu ';
+    $req = mysqli_query($sql) or die('Erreur Sql' . $sql . mysqli_error());
     ?>
 
-    </tbody>
-</table>
+    <?php
+    while ($data = mysqli_fetch_array($req)){
+    ?>
+    <h6 class="u-text u-text-1">Notre chef</h6>
+    <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+                <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <h6 class="u-text u-text-2">Entrée</h6>
+                    <p class="u-text u-text-3"><?php $data['nameEntre'] ?></p>
+                </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+                <div class="u-container-layout u-similar-container u-container-layout-2">
+                    <h6 class="u-text u-text-4">Plat</h6>
+                    <p class="u-text u-text-5"><?php $data['namePlat'] ?></p>
+                </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+                <div class="u-container-layout u-similar-container u-container-layout-3">
+                    <h6 class="u-text u-text-6">dessert</h6>
+                    <p class="u-text u-text-7"><?php $data['nameDessert'] ?></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    </div>
+</section>

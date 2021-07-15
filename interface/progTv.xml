@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+    <channel>
+        <title>Programe TV</title>
+        <link>http://localhost/blog/progTv</link>
+        <images>
+            <url></url>
+            <link></link>
+        </images>
+        <description>proegrame tv en temp réel</description>
+        <item>
+            <title>chaine 1</title>
+            <link></link>
+            <description>tout sur chaine 1</description>
+        </item>
+        <item>
+            <title>chaine 2</title>
+            <link></link>
+            <description>tout sur chaine 2</description>
+        </item>
+    </channel>
+</rss>

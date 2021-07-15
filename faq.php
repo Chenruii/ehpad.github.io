@@ -1,6 +1,6 @@
-<?php
-?>
 <?php include 'head.php'; ?>
+
+<?php include 'banner.php'; ?>
 <main class="page faq-page">
     <section class="clean-block clean-faq dark">
         <div class="container">

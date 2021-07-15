@@ -39,15 +39,16 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <!--div class="form-group <?php echo !empty($roleError) ? 'has-error' : ''; ?>">
+                    <div class="form-group <?php echo !empty($roleError) ? 'has-error' : ''; ?>">
                         <label class="control-label">Role</label>
                         <div class="controls">
-                            <input name="mobile" type="text" placeholder="mobile" value="<?php echo !empty($role) ? $role : ''; ?>">
+                            <input name="role" type="text" placeholder="role"
+                                   value="<?php echo !empty($role) ? $role : ''; ?>">
                             <?php if (!empty($roleError)): ?>
                                 <span class="help-inline"><?php echo $roleError; ?></span>
                             <?php endif; ?>
                         </div>
-                    </div-->
+                    </div>
                     <div class="form-actions">
                         <input type="submit" class="btn btn-success" value="Créer un nouveau utilisateur">
                         <a class="btn" href="dashboard.php">Retour</a>

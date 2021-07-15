@@ -62,35 +62,3 @@
 </html>
 
 
-<section class="u-align-left u-clearfix u-image u-section-1" id="carousel_b562" data-image-width="150"
-         data-image-height="100">
-    <h6 class="u-text u-text-1">Notre chef</h6>
-    <div class="u-list u-list-1">
-        <div class="u-repeater u-repeater-1">
-            <?php for ($i = 1; $i <= 5; $i++) { ?>
-                <li>  <?php echo $i; ?> </li>
-            <?php } ?>
-            <div class="u-align-left u-container-style u-list-item u-repeater-item">
-                <div class="u-container-layout u-similar-container u-container-layout-1">
-                    <h6 class="u-text u-text-2">Entrée</h6>
-                    <p class="u-text u-text-3">Reid’s Orchard Pears / Bitter Greens / Granola / Big Firefly / Farms
-                        Black and Blue / Pine Nut Vinaigrette</p>
-                </div>
-            </div>
-            <div class="u-align-left u-container-style u-list-item u-repeater-item">
-                <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <h6 class="u-text u-text-4">Plat</h6>
-                    <p class="u-text u-text-5">Adriatic Seafood Soup / Clams / Prawns / Livornese / Langoustine Scallop
-                        / Celery / Olive</p>
-                </div>
-            </div>
-            <div class="u-align-left u-container-style u-list-item u-repeater-item">
-                <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <h6 class="u-text u-text-6">dessert</h6>
-                    <p class="u-text u-text-7">Honey Vinaigrette / House Cheese Crouton / Fine Herbs</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>

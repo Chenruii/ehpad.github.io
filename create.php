@@ -37,7 +37,7 @@ if (!empty($_POST)) {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $q = $pdo->prepare("INSERT INTO user VALUES (:name, :email,:role)");
+        $q = $pdo->prepare("INSERT INTO user (name,email,role) VALUES (:name, :email,:role)");
         $q->execute(array($name, $email, $role));
         Database::disconnect();
         header("Location: dashboard.php");

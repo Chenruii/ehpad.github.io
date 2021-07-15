@@ -6,6 +6,12 @@ if (isset($_POST['name']) && isset($_POST['password'])) {
     $dbUsername = 'root';
     $dbPassword = 'root';
 
+    /**
+     * $dbHost = 'chenruo1.mysql.db';
+     * $dbName = 'chenruo1';
+     * $dbUsername = 'chenruo1';
+     * $dbPassword = 'hUV255NY8j5PFNk';***/
+
     $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName) or die('Connection echoué');
 
     $name = mysqli_real_escape_string($conn, htmlspecialchars($_POST['name']));

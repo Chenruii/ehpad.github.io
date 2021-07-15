@@ -7,6 +7,12 @@ class Database
     private static $dbUsername = 'root';
     private static $dbPassword = 'root';
 
+    /**
+     * private static $dbHost = 'chenruo1.mysql.db';
+     * private static $dbName = 'chenruo1';
+     * private static $dbUsername = 'chenruo1';
+     * private static $dbPassword = 'hUV255NY8j5PFNk';**/
+
     private static $conn = null;
 
     public function __construct()
@@ -30,6 +36,6 @@ class Database
     {
         self::$conn = null;
     }
-}
 
+}
 ?>

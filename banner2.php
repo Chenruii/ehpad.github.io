@@ -7,28 +7,13 @@
         <div class="collapse navbar-collapse"
              id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" role="presentation"><a href="dashboard.php"
+                <li class="nav-item" role="presentation"><a href="profile.php"
                                                             class="nav-link active fas fa-user-circle ">Profil</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="menu.php">Menu</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="activity.php">Activité</a></li>
                 <li class="nav-item" role="presentation"><a href="dashboard.php?logout=true" class="nav-link">Déconnecter</a>
-                    <?php
-                    session_start();
-                    if (isset($_GET['logout'])) {
-                        if ($_GET['logout'] == true) {
-                            session_unset();
-                            header("location:login.php");
-                        }
-                    } else if ($_SESSION['name'] !== "") {
-                        $user = $_SESSION['name'];
-                        // afficher un message
-                        echo "<br>Bonjour $user, vous êtes connectés";
-                    }
-                    ?>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-</body>
-
